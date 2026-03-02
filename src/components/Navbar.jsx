@@ -13,10 +13,10 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Inicio", href: "#" },
-    { name: "Nosotros", href: "#" },
+    { name: "Inicio", href: "#inicio" },
+    { name: "Nosotros", href: "#sobre-nosotros" },
     { name: "Propuestas", href: "#" },
-    { name: "Súmate", href: "#", highlight: true },
+    { name: "Súmate", href: "#mensaje", highlight: true },
   ];
 
   return (
@@ -28,12 +28,12 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
-        
         <div className="flex items-center gap-2.5 sm:gap-3">
-
-          <span className="text-white font-bold tracking-tight text-xl sm:text-xl">
-            UPL <span className="text-gold">FCEyE</span>
-          </span>
+          <a href="#inicio">
+            <span className="text-white font-bold tracking-tight text-xl sm:text-xl">
+              UPL <span className="text-gold">FCEyE</span>
+            </span>
+          </a>
         </div>
 
         {/* MENU DESKTOP (DERECHA) */}

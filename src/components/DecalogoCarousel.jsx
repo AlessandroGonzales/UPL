@@ -16,14 +16,14 @@ import diez from "../assets/diez.png";
 const decalogoItems = [
   { id: 1, title: "Vida, Libertad y Propiedad", img: uno, config: "lazy" },
   { id: 2, title: "Igualdad ante la Ley", img: dos, config: "lazy" },
-  { id: 3, title: "Libre Mercado", img: tres, config: "lazy"  },
+  { id: 3, title: "Libre Mercado", img: tres, config: "lazy" },
   { id: 4, title: "Propiedad Privada", img: cuatro, config: "lazy" },
   { id: 5, title: "Cooperación Social", img: cinco, config: "lazy" },
   { id: 6, title: "Gobierno Limitado", img: seis, config: "lazy" },
   { id: 7, title: "Responsabilidad Individual", img: siete, config: "lazy" },
   { id: 8, title: "Apertura al Mundo", img: ocho, config: "lazy" },
-  { id: 9, title: "Competencia", img: nueve, config: "lazy"  },
-  { id: 10, title: "Proyecto de Vida", img: diez, config: "lazy"  },
+  { id: 9, title: "Competencia", img: nueve, config: "lazy" },
+  { id: 10, title: "Proyecto de Vida", img: diez, config: "lazy" },
 ];
 
 const DecalogoCard = ({ item, isSide }) => {
@@ -37,7 +37,7 @@ const DecalogoCard = ({ item, isSide }) => {
       <img
         src={item.img}
         alt={item.title}
-        loading= {item.config}
+        loading={item.config}
         /* Usamos object-contain para que la placa no se corte si el marco es muy grande */
         className="w-full h-full "
       />
@@ -83,17 +83,24 @@ export default function DecalogoCarousel() {
 
   return (
     <section className="bg-primaryDark py-20 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 mb-14 text-center">
-        <div>
-          <p className="text-gold font-bold tracking-[4px] uppercase text-xs mb-2 ">
-            Principios Fundamentales
-          </p>
-          <h2 className="text-white text-4xl md:text-6xl font-black uppercase leading-none">
-            El Decálogo <br />
-            <span className="text-gold ">Liberal</span>
-          </h2>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="max-w-7xl mx-auto px-6 mb-14 text-center">
+          <div>
+            <p className="text-gold font-bold tracking-[4px] uppercase text-xs mb-2 ">
+              Principios Fundamentales
+            </p>
+            <h2 className="text-white text-4xl md:text-6xl font-black uppercase leading-none">
+              El Decálogo <br />
+              <span className="text-gold ">Liberal</span>
+            </h2>
+          </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* CONTENEDOR AJUSTADO: max-w-5xl y mx-auto para que no sea tan ancho en PC */}
       <div className="relative w-full max-w-5xl mx-auto h-[60vh] md:h-[70vh]">
@@ -157,8 +164,6 @@ export default function DecalogoCarousel() {
           </div>
         </div>
       </div>
-
-      
 
       {/* INDICADORES */}
       <div className="flex justify-center gap-2 mt-12">
