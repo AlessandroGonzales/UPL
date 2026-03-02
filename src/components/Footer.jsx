@@ -9,7 +9,7 @@ export default function Footer() {
         
         {/* LOGO Y NOMBRE */}
         <div className="flex flex-col items-center mb-8">
-          <img src={logo} alt="UPL Logo" className="h-24 w-auto mb-4 opacity-80" />
+          <img src={logo} alt="UPL Logo" loading="lazy" className="h-24 w-auto mb-4 opacity-80"  />
           <h3 className="text-white font-bold tracking-widest text-sm uppercase">
             Universitarios <span className="text-gold">Por La Libertad</span>
           </h3>

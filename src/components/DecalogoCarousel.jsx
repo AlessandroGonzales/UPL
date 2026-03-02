@@ -14,16 +14,16 @@ import nueve from "../assets/nueve.png";
 import diez from "../assets/diez.png";
 
 const decalogoItems = [
-  { id: 1, title: "Vida, Libertad y Propiedad", img: uno },
-  { id: 2, title: "Igualdad ante la Ley", img: dos },
-  { id: 3, title: "Libre Mercado", img: tres },
-  { id: 4, title: "Propiedad Privada", img: cuatro },
-  { id: 5, title: "Cooperación Social", img: cinco },
-  { id: 6, title: "Gobierno Limitado", img: seis },
-  { id: 7, title: "Responsabilidad Individual", img: siete },
-  { id: 8, title: "Apertura al Mundo", img: ocho },
-  { id: 9, title: "Competencia", img: nueve },
-  { id: 10, title: "Proyecto de Vida", img: diez },
+  { id: 1, title: "Vida, Libertad y Propiedad", img: uno, config: "lazy" },
+  { id: 2, title: "Igualdad ante la Ley", img: dos, config: "lazy" },
+  { id: 3, title: "Libre Mercado", img: tres, config: "lazy"  },
+  { id: 4, title: "Propiedad Privada", img: cuatro, config: "lazy" },
+  { id: 5, title: "Cooperación Social", img: cinco, config: "lazy" },
+  { id: 6, title: "Gobierno Limitado", img: seis, config: "lazy" },
+  { id: 7, title: "Responsabilidad Individual", img: siete, config: "lazy" },
+  { id: 8, title: "Apertura al Mundo", img: ocho, config: "lazy" },
+  { id: 9, title: "Competencia", img: nueve, config: "lazy"  },
+  { id: 10, title: "Proyecto de Vida", img: diez, config: "lazy"  },
 ];
 
 const DecalogoCard = ({ item, isSide }) => {
@@ -37,7 +37,7 @@ const DecalogoCard = ({ item, isSide }) => {
       <img
         src={item.img}
         alt={item.title}
-        loading="lazy"
+        loading= {item.config}
         /* Usamos object-contain para que la placa no se corte si el marco es muy grande */
         className="w-full h-full "
       />
