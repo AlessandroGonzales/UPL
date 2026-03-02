@@ -1,5 +1,5 @@
 import logo from "../assets/logotipoupl.png"
-import grupo from "../assets/grupounr.png"
+import grupo from "../assets/grupounr.jpg"
 
 export default function Hero() {
   return (
@@ -11,6 +11,7 @@ export default function Hero() {
         <img 
           src={grupo} 
           alt="Grupo UPL" 
+          loading="eager"
           /* En mobile usamos object-top para priorizar las caras, en desktop center */
           className="h-full w-full object-cover object-top md:object-center opacity-50 animate-fade-in"
         />
