@@ -1,5 +1,5 @@
 import logo from "../assets/logotipoupl.png"
-import grupo from "../assets/grupounr.jpg"
+import grupo from "../assets/grupounr.png"
 
 export default function Hero() {
   return (
