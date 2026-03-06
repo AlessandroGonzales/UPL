@@ -15,6 +15,7 @@ export const proposals = [
     shortDesc: "Garantizar exámenes y reprogramación obligatoria ante paros.",
     fullDesc: "Garantizar exámenes presenciales o virtuales y la reprogramación obligatoria e inmediata ante paros docentes o de transporte, para que ningún estudiante pierda su fecha ni vea afectado su avance académico.",
     image: prouno, 
+    config: "lazy"
   },
   {
     id: "transparencia-presupuestaria",
@@ -23,7 +24,8 @@ export const proposals = [
     shortDesc: "Publicación mensual y clara del destino de los fondos.",
     fullDesc: "Publicación mensual, clara y accesible del destino de los fondos de la facultad, con rendición de cuentas sobre gastos y mantenimiento de las instalaciones.",
     highlight: "AUDITORÍA DE LOS GASTOS: CUIDEMOS NUESTRO DINERO",
-    image: prodos
+    image: prodos,
+    config: "lazy"
   },
   {
     id: "digitalizacion-total",
@@ -32,6 +34,7 @@ export const proposals = [
     shortDesc: "Acceso digital a apuntes y reducción de burocracia.",
     fullDesc: "Acceso a apuntes en formato digital y digitalización completa de inscripciones, certificados y solicitudes, reduciendo la burocracia y los costos innecesarios.",
     image: protres,
+    config: "lazy"
   },
   {
     id: "evaluacion-docente",
@@ -41,6 +44,7 @@ export const proposals = [
     fullDesc: "Implementar encuestas obligatorias, anónimas y públicas para evaluar el desempeño docente, cuyos resultados influyan en la continuidad y mejora de las cátedras.",
     highlight: "La calidad educativa importa.",
     image: procuatro,
+    config: "lazy"
   },
   {
     id: "regimen-virtualidad",
@@ -49,6 +53,7 @@ export const proposals = [
     shortDesc: "Clases grabadas y tutorías para quienes trabajan y estudian.",
     fullDesc: "Garantizar acceso a clases grabadas, material digital y tutorías online para estudiantes con trabajo, facilitando la continuidad de la carrera.",
     image: procinco,
+    config: "lazy"
   },
   {
     id: "modernizacion-contenidos",
@@ -57,5 +62,6 @@ export const proposals = [
     shortDesc: "Programas actualizados y pasantías con empresas reales.",
     fullDesc: "Actualizar los programas según las demandas actuales y generar convenios con empresas y estudios para pasantías y formación orientada al mundo laboral.",
     image: proseis,
+    config: "lazy"
   },
 ];

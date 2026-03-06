@@ -80,6 +80,7 @@ export default function ProposalDetails() {
                 <img 
                   src={proposal.image} 
                   alt={proposal.title} 
+                  loading={proposal.config}
                   className="w-full h-full object-cover"
                   onError={(e) => { e.target.src = "https://via.placeholder.com/600x600/1a1a1a/D4AF37?text=UPL+PROPUESTA"; }}
                 />
