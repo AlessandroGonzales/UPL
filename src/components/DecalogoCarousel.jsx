@@ -91,7 +91,7 @@ export default function DecalogoCarousel() {
       >
         <div className="max-w-7xl mx-auto px-6 mb-14 text-center">
           <div>
-            <p className="text-gold font-bold tracking-[4px] uppercase text-xs mb-2 ">
+            <p className="text-gold font-bold tracking-[6px] uppercase text-xs mb-4 ">
               Principios Fundamentales
             </p>
             <h2 className="text-white text-4xl md:text-6xl font-black uppercase leading-none">

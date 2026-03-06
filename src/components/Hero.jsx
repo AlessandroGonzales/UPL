@@ -4,7 +4,10 @@ import grupo from "../assets/grupounr.jpg";
 export default function Hero() {
   return (
     /* Cambiamos min-h-screen por flex-col en mobile para que el contenido fluya hacia abajo */
-    <section id="inicio" className="relative w-full flex flex-col md:min-h-screen md:items-center md:justify-center overflow-hidden bg-primaryDark">
+    <section
+      id="inicio"
+      className="relative w-full flex flex-col md:min-h-screen md:items-center md:justify-center overflow-hidden bg-primaryDark"
+    >
       {/* CONTENEDOR DE IMAGEN */}
       <div className="relative w-full h-[45vh] md:absolute md:inset-0 md:h-full z-0">
         <img
@@ -53,9 +56,12 @@ export default function Hero() {
           >
             Quienes somos
           </a>
-          <button className="border-2 border-white/20 hover:border-white text-white font-medium py-4 px-10 rounded-full transition-all">
+          <a
+            href="#propuestas"
+            className="border-2 border-white/20 hover:border-white text-white font-medium py-4 px-10 rounded-full transition-all"
+          >
             Nuestras propuestas
-          </button>
+          </a>
         </div>
       </div>
     </section>

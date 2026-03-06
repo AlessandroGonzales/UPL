@@ -25,7 +25,7 @@ export default function ProposalsTeaser() {
   return (
     <section id="propuestas" className="bg-primary py-24 px-6 relative overflow-hidden">
       {/* Círculo decorativo de fondo */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gold/15 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto text-center relative z-10">
         
@@ -76,7 +76,7 @@ export default function ProposalsTeaser() {
             to="/propuestas" 
             className="flex items-center gap-3 bg-gold hover:bg-yellow-600 text-primaryDark font-black py-5 px-10 rounded-full shadow-[0_10px_30px_rgba(212,175,55,0.2)] transition-all uppercase tracking-widest text-sm"
           >
-            Ver propuestas en detalle
+            Ver propuestas
             <ArrowRight size={20} />
           </Link>
         </motion.div>

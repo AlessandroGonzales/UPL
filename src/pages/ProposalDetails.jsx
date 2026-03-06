@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { proposals } from "../data/proposalsData";
-import { ArrowLeft, CheckCircle } from "lucide-react";
+import { ArrowLeft, CheckCircle, Share2 } from "lucide-react"; // Importamos Share2
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
@@ -11,7 +11,6 @@ export default function ProposalDetails() {
   const { id } = useParams();
   const proposal = proposals.find((p) => p.id === id);
 
-  // Scroll al inicio al cargar la página
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]);
@@ -28,6 +27,14 @@ export default function ProposalDetails() {
     );
   }
 
+  // Lógica para compartir en WhatsApp
+  const handleShareWhatsApp = () => {
+    const shareUrl = window.location.href;
+    const shareText = `¡Mirá esta propuesta de UPL para la FCEyE! \n\n*${proposal.title}*\n\nLeela completa acá: ${shareUrl}`;
+    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <>
       <Navbar />
@@ -41,7 +48,7 @@ export default function ProposalDetails() {
             Volver a propuestas
           </Link>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
             {/* TEXTO */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -59,8 +66,8 @@ export default function ProposalDetails() {
               </p>
 
               {proposal.highlight && (
-                <div className="bg-primaryDark border-l-4 border-gold p-6 mb-8 italic shadow-lg">
-                  <p className="text-white font-bold text-lg">"{proposal.highlight}"</p>
+                <div className="bg-primaryDark border-l-4 border-gold p-6 mb-8 italic shadow-lg text-white font-bold text-lg">
+                  "{proposal.highlight}"
                 </div>
               )}
 
@@ -76,20 +83,41 @@ export default function ProposalDetails() {
               animate={{ opacity: 1, scale: 1 }}
               className="relative"
             >
-              <div className=" bg-primaryDark rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative z-10">
+              <div className="bg-primaryDark rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative z-10">
                 <img 
                   src={proposal.image} 
                   alt={proposal.title} 
-                  loading={proposal.config}
                   className="w-full h-full object-cover"
                   onError={(e) => { e.target.src = "https://via.placeholder.com/600x600/1a1a1a/D4AF37?text=UPL+PROPUESTA"; }}
                 />
               </div>
-              {/* Decoración de fondo */}
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gold/30 rounded-full blur-3xl z-0" />
               <div className="absolute -top-6 -left-6 w-24 h-24 bg-gold/10 rounded-full blur-2xl z-0" />
             </motion.div>
           </div>
+
+          {/* SECCIÓN COMPARTIR */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="border-t border-white/10 pt-16 text-center"
+          >
+            <h3 className="text-white text-2xl font-bold mb-4 uppercase tracking-tight">
+              ¿Te gusta esta propuesta?
+            </h3>
+            <p className="text-gray-400 mb-8 max-w-lg mx-auto leading-relaxed">
+              Compartila para que llegue a cada estudiante de la FCEyE. El cambio lo hacemos realidad entre todos.
+            </p>
+            
+            <button
+              onClick={handleShareWhatsApp}
+              className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20ba5a] text-white font-black py-4 px-10 rounded-full shadow-[0_10px_30px_rgba(37,211,102,0.2)] transition-all active:scale-95 uppercase tracking-widest text-sm"
+            >
+              Compartir en WhatsApp
+              <Share2 size={18} />
+            </button>
+          </motion.div>
         </div>
       </main>
       <Footer />

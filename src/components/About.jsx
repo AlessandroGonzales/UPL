@@ -25,13 +25,14 @@ export default function About() {
                   defender al estudiante y su derecho a cursar, rendir y
                   formarse sin obstáculos, presiones ni abusos de poder.
                 </p>
-                <p>
+                <p className="">
                   Hace casi un año empezamos levantando la voz en las asambleas
                   para evitar las tomas y las decisiones que perjudican a la
                   mayoría. Hoy damos un paso más: estamos acá para acompañarte,
                   representarte y defenderte cuando más se necesita.
                 </p>
-                <p className="font-semibold text-white">
+                <br/>
+                <p className="font-semibold text-white ">
                   El país está cambiando y las universidades también tienen que
                   hacerlo.
                 </p>
@@ -41,7 +42,7 @@ export default function About() {
           {/* COLUMNA DERECHA: PILARES/VALORES (Diseño Minimalista) */}
           <div className="bg-primaryDark/50 p-8 md:p-12 rounded-2xl border border-white/5 shadow-2xl relative overflow-hidden group">
             {/* Decoración de fondo */}
-            <div className="absolute -top-24 -right-24 w-64 h-64 bg-gold/10 rounded-full blur-3xl group-hover:bg-gold/10 transition-all duration-700" />
+            <div className="absolute -top-24 -right-24 w-64 h-64 bg-gold/15 rounded-full blur-3xl group-hover:bg-gold/10 transition-all duration-700" />
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -92,7 +93,7 @@ export default function About() {
                 </li>
               </ul>
 
-              <div className="mt-10 pt-8 border-t border-white/5">
+              <div className="mt-10 pt-8 border-t border-white/10">
                 <p className="text-gold font-black text-center text-xl tracking-tighter">
                   POR UNA UNIVERSIDAD AL SERVICIO DEL ESTUDIANTE.
                 </p>

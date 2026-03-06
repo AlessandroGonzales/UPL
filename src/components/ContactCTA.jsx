@@ -9,7 +9,7 @@ export default function ContactCTA() {
   return (
     <section id="mensaje" className="bg-primaryDark py-24 px-6 border-t border-white/5 relative overflow-hidden">
       {/* Elemento visual de fondo: Símbolo de libertad difuminado */}
-      <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-gold/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-gold/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <motion.div
