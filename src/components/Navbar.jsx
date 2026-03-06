@@ -13,10 +13,10 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Inicio", href: "#inicio" },
-    { name: "Nosotros", href: "#sobre-nosotros" },
-    { name: "Propuestas", href: "#" },
-    { name: "Súmate", href: "#mensaje", highlight: true },
+    { name: "Inicio", href: "/" },
+    { name: "Nosotros", href: "/#sobre-nosotros" },
+    { name: "Propuestas", href: "/#propuestas" },
+    { name: "Súmate", href: "/#mensaje", highlight: true },
   ];
 
   return (
@@ -29,7 +29,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
         <div className="flex items-center gap-2.5 sm:gap-3">
-          <a href="#inicio">
+          <a href="/">
             <span className="text-white font-bold tracking-tight text-xl sm:text-xl">
               UPL <span className="text-gold">FCEyE</span>
             </span>
