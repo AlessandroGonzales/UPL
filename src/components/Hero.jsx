@@ -3,7 +3,6 @@ import grupo from "../assets/grupounr.jpg";
 
 export default function Hero() {
   return (
-    /* Cambiamos min-h-screen por flex-col en mobile para que el contenido fluya hacia abajo */
     <section
       id="inicio"
       className="relative w-full flex flex-col md:min-h-screen md:items-center md:justify-center overflow-hidden bg-primaryDark"
@@ -14,27 +13,22 @@ export default function Hero() {
           src={grupo}
           alt="Grupo UPL"
           loading="eager"
-          /* En mobile usamos object-top para priorizar las caras, en desktop center */
           className="h-full w-full object-cover object-top md:object-center opacity-50 animate-fade-in"
         />
 
         {/* GRADIENTES DINÁMICOS */}
-        {/* Este overlay en mobile hace que la foto se funda con el fondo oscuro antes de llegar al texto */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primaryDark/20 to-primaryDark md:hidden" />
 
-        {/* Este es el overlay clásico para Desktop */}
         <div className="hidden md:block absolute inset-0 bg-gradient-to-b from-primaryDark/30 via-primaryDark/70 to-primaryDark" />
       </div>
 
       {/* CONTENIDO PRINCIPAL */}
-      {/* Agregamos un padding top negativo en mobile para que el logo suba un poco sobre la imagen */}
       <div className="relative z-10 flex flex-col items-center text-center px-6 py-8 md:py-0 -mt-20 md:mt-0 max-w-4xl">
         {/* Contenedor del Logo */}
         <div className=" animate-fade-in">
           <img
             src={logo}
             alt="Logo UPL"
-            /* Reducimos un poco el tamaño en mobile para que no empuje todo hacia abajo */
             className="w-72 h-auto md:w-80 "
           />
         </div>

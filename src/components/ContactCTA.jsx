@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Mail, Send } from "lucide-react";
 
 export default function ContactCTA() {
-  const email = "jamancapiero85@gmail.com"; // Reemplazalo por el mail de UPL
+  const email = "jamancapiero85@gmail.com"; 
   const subject = "Propuesta / Inquietud de un estudiante - FCEyE";
 
   return (

@@ -48,7 +48,6 @@ export default function Footer() {
           <p>© {currentYear} UPL - TODOS LOS DERECHOS RESERVADOS.</p>
           <div className="flex gap-6">
             <p>Hecho por <span className="text-white font-semibold">Alessandro Gonzales</span></p> 
-            {/* Aquí podés poner tu nombre para que todos vean quién hizo la magia */}
           </div>
         </div>
       </div>
