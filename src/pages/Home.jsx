@@ -4,8 +4,8 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import About from '../components/About'
 import DecalogoCarousel from '../components/DecalogoCarousel'
-import ProposalsTeaser from '../components/ProposalsTeaser'
 import ContactCTA from '../components/ContactCTA'
+import FacultyPortal from '../components/FacultyPortal'
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
         <Hero />
         <About/>
         <DecalogoCarousel/>
-        <ProposalsTeaser/>  
+        <FacultyPortal />
         <ContactCTA/>
       </main>
       <Footer/>
